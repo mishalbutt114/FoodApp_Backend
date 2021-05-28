@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "60aa93f288ad5c0c80c81004",
+    "firstName": "Hammad",
+    "lastName": "Umar",
+    "email": "hammad@gmail.com",
+    "password": "123456",
+    "address": "9985 Winding Way Dr.South Bend, IN 46614"
+  },
+  {
+    "_id": "60aa95c5af02a33d30002d98",
+    "firstName": "Sarah",
+    "lastName": "Williams",
+    "email": "sara@gmail.com",
+    "password": "123456",
+    "address": "233 Bay State Rd Boston MA 02215"
+  },
+  {
+    "_id": "60aa95f4a991b108d06e50eb",
+    "firstName": "Jen",
+    "lastName": "Parker",
+    "email": "jen@gmail.com",
+    "password": "123456",
+    "address": "220 Pawtucket St, Lowell, MA 01854"
+  }
+]

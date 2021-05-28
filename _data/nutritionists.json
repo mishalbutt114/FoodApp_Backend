@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Jessica Smith",
+    "bio": "Best and well educated nutritionist.",
+    "email": "jessica@example.com",
+    "age": 30,
+    "phoneNo": "222-111-111",
+    "address": "Sherburn House, Station Lane, Birkenshaw"
+  },
+  {
+    "name": "Gunther",
+    "bio": "Best and well educated nutritionist.",
+    "email": "gunther@example.com",
+    "age": 35,
+    "phoneNo": "222-111-111",
+    "address": "15 Lybury Lane, Redbourn"
+  },
+  
+  {
+    "name": "Andrew Mead",
+    "bio": "Best and well educated nutritionist.",
+    "email": "andrew@example.com",
+    "age": 25,
+    "phoneNo": "222-111-111",
+    "address": "35 Tallents Crescent, Harpenden"
+  },
+  {
+    "name": "Steve Smith",
+    "bio": "Best and well educated nutritionist.",
+    "email": "steve@example.com",
+    "age": 68,
+    "phoneNo": "222-111-111",
+    "address": "19 West Mead, Welwyn Garden City"
+  }
+]

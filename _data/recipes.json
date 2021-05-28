@@ -1,0 +1,26 @@
+[
+  {
+    "instructions": "Carbonara. Spaghetti and meatballs. Macaroni and cheese. Pasta salad. These are just a few pasta dish hall-of-famers. Pasta is such a simple ingredient, pairing well with just about any spice, flavor, or protein you can name. There are so many possibilities; it’s no wonder so many weeknight dinners start with noodles.",
+    "ingredients": [],
+    "_id": "60acd3821ee5260c58ca2454",
+    "name": "Biryani",
+    "cookingTime": "1 hour",
+    "author": "60aa93f288ad5c0c80c81004"
+  },
+  {
+    "instructions": "Carbonara. Spaghetti and meatballs. Macaroni and cheese. Pasta salad. These are just a few pasta dish hall-of-famers. Pasta is such a simple ingredient, pairing well with just about any spice, flavor, or protein you can name. There are so many possibilities; it’s no wonder so many weeknight dinners start with noodles.",
+    "ingredients": [],
+    "_id": "60acd38b1ee5260c58ca2455",
+    "name": "Pizza",
+    "cookingTime": "1 hour",
+    "author": "60aa93f288ad5c0c80c81004"
+  },
+  {
+    "instructions": "Carbonara. Spaghetti and meatballs. Macaroni and cheese. Pasta salad. These are just a few pasta dish hall-of-famers. Pasta is such a simple ingredient, pairing well with just about any spice, flavor, or protein you can name. There are so many possibilities; it’s no wonder so many weeknight dinners start with noodles.",
+    "ingredients": [],
+    "_id": "60acd3901ee5260c58ca2456",
+    "name": "Pasta",
+    "cookingTime": "1 hour",
+    "author": "60aa93f288ad5c0c80c81004"
+  }
+]
