@@ -41,6 +41,14 @@ const recipesSchema = new Schema(
   }
 )
 
+recipesSchema.methods.toJSON = function () {
+  const recipeObj = this.toObject()
+
+  delete recipeObj.image 
+
+  return recipeObj
+}
+
 recipesSchema.pre('remove', async function (next) {
   await Ingredient.deleteMany({ recipe: this._id })
   next()
