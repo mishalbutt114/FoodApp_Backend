@@ -7,7 +7,6 @@ const recipesSchema = new Schema(
     name: {
       type: String,
       trim: true,
-      unique: true,
       required: [true, 'Recipe name is required!'],
     },
     image: {

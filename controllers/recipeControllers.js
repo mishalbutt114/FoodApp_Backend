@@ -2,14 +2,22 @@ const sharp = require('sharp')
 const Recipe = require('../models/Recipe')
 const ErrorResponse = require('../utils/ErrorResponse')
 const asyncHandler = require('../middlewares/asyncHandler')
+const Ingredient = require('../models/Ingredient')
 
 //  @url            /api/v1/recipes
 //  @method         POST
 //  @description    Create new recipe
 //  @access         Private
 exports.createRecipe = asyncHandler(async (req, res) => {
+  let  ing = new Ingredient({
+    ...req.body,
+    name : req.body.ingredients,
+  });
+  ing = await ing.save();
+  console.log(req.body);
   const recipe = new Recipe({
     ...req.body,
+    ingredients:[ing._id],
     author: req.user._id,
   })
 
@@ -17,7 +25,7 @@ exports.createRecipe = asyncHandler(async (req, res) => {
 
   res.status(201).json({
     success: true,
-    data: recipe,
+    // data: recipe,
   })
 })
 

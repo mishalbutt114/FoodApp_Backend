@@ -10,7 +10,6 @@ const ingredientsSchema = new Schema(
     },
     calories: {
       type: Number,
-      min: [0, 'Calories must be positive!'],
       default: 0,
     },
     quantity: {
@@ -24,11 +23,6 @@ const ingredientsSchema = new Schema(
     healthy: {
       type: Boolean,
       default: false,
-    },
-    recipe: {
-      type: Schema.Types.ObjectId,
-      ref: 'Recipe',
-      required: true,
     },
   },
   {
