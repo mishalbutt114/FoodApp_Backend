@@ -14,7 +14,7 @@ exports.addIngredient = asyncHandler(async (req, res, next) => {
   })
 
   if (!recipe) {
-    return next(new ErrorResponse('Recipe not found!', 404))
+    return next(new ErrorResponse('Recipe not found!', 400))
   }
 
   const ingredient = new Ingredient({
@@ -69,7 +69,7 @@ exports.getSingleIngredient = asyncHandler(async (req, res, next) => {
   const ingredient = await Ingredient.findById(req.params.id)
 
   if (!ingredient) {
-    return next(new ErrorResponse('Ingredient not found!', 404))
+    return next(new ErrorResponse('Ingredient not found!', 400))
   }
 
   res.status(200).json({

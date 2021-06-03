@@ -28,13 +28,13 @@ exports.login = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email })
 
   if (!user) {
-    return next(new ErrorResponse('Invalid Credentials!', 404))
+    return next(new ErrorResponse('Invalid Credentials!', 400))
   }
 
   const isMatch = await user.matchPassword(password)
 
   if (!isMatch) {
-    return next(new ErrorResponse('Invalid Credentials!', 404))
+    return next(new ErrorResponse('Invalid Credentials!', 400))
   }
 
   const token = await user.generateAuthToken()

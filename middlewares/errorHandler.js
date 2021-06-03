@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, next) => {
 
   if (err.name === 'CastError') {
     const message = `Resource not found!`
-    error = new ErrorResponse(message, 404)
+    error = new ErrorResponse(message, 400)
   }
 
   if (err.code === 11000) {

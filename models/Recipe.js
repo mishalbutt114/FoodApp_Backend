@@ -13,6 +13,9 @@ const recipesSchema = new Schema(
     image: {
       type: Buffer,
     },
+    photo: {
+      type:String
+    },
     instructions: {
       type: String,
       trim: true,

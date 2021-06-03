@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema(
     address: {
       type: String,
       trim: true,
-      minLength: [25, 'Address can not contains more than 25 characters!'],
+      minLength: [10, 'Address can not contains more than 25 characters!'],
       default: '',
     },
     tokens: [

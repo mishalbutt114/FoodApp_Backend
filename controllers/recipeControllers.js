@@ -65,7 +65,7 @@ exports.getSingleRecipe = asyncHandler(async (req, res, next) => {
   const recipe = await Recipe.findById(req.params.id)
 
   if (!recipe) {
-    return next(new ErrorResponse('Recipe not found!', 404))
+    return next(new ErrorResponse('Recipe not found!', 400))
   }
 
   res.status(200).json({
@@ -94,7 +94,7 @@ exports.updateRecipe = asyncHandler(async (req, res, next) => {
   let recipe = await Recipe.findById(req.params.id)
 
   if (!recipe) {
-    return next(new ErrorResponse('Recipe not found!', 404))
+    return next(new ErrorResponse('Recipe not found!', 400))
   }
 
   if (recipe.author !== req.user._id) {
@@ -122,7 +122,7 @@ exports.deleteRecipe = asyncHandler(async (req, res, next) => {
   const recipe = await Recipe.findById(req.params.id)
 
   if (!recipe) {
-    return next(new ErrorResponse('Recipe not found!', 404))
+    return next(new ErrorResponse('Recipe not found!', 400))
   }
 
   if (recipe.author !== req.user._id) {
@@ -150,7 +150,7 @@ exports.uploadRecipeImage = asyncHandler(
     })
 
     if (!recipe) {
-      return next(new ErrorResponse('Recipe not found!', 404))
+      return next(new ErrorResponse('Recipe not found!', 400))
     }
 
     const buffer = await sharp(req.file.buffer).png().toBuffer()
@@ -175,7 +175,7 @@ exports.getRecipeImage = asyncHandler(async (req, res, next) => {
   const recipe = await Recipe.findById(req.params.id)
 
   if (!recipe || !recipe.image) {
-    return next(new ErrorResponse('Not found!', 404))
+    return next(new ErrorResponse('Not found!', 400))
   }
 
   res.set('Content-Type', 'image/png')

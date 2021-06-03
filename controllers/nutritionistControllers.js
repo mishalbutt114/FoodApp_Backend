@@ -40,7 +40,7 @@ exports.getSingleNutritionist = asyncHandler(async (req, res, next) => {
   const nutritionist = await Nutritionist.findById(req.params.id)
 
   if (!nutritionist) {
-    return next(new ErrorResponse('Nutritionist not found!', 404))
+    return next(new ErrorResponse('Nutritionist not found!', 400))
   }
 
   res.status(200).json({
