@@ -14,7 +14,6 @@ exports.createRecipe = asyncHandler(async (req, res) => {
     name : req.body.ingredients,
   });
   ing = await ing.save();
-  console.log(req.body);
   const recipe = new Recipe({
     ...req.body,
     ingredients:[ing._id],
@@ -25,7 +24,7 @@ exports.createRecipe = asyncHandler(async (req, res) => {
 
   res.status(201).json({
     success: true,
-    // data: recipe,
+    data: recipe,
   })
 })
 
