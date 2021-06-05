@@ -13,7 +13,7 @@ const ingredientsSchema = new Schema(
       default: 0,
     },
     quantity: {
-      type: Number,
+      type: String,
       default: 0,
     },
     amount: {

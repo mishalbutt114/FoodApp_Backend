@@ -20,14 +20,15 @@ const port = process.env.PORT
 
 app.use(express.json())
 app.use(mongoSanitize())
-app.use(helmet())
+// app.use(helmet())
 app.use(cors())
-app.use(hpp())
-app.use(xss())
+// app.use(hpp())
+// app.use(xss())
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('tiny'))
 }
+
 
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/recipes', recipeRoutes)

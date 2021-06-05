@@ -77,3 +77,11 @@ exports.getSingleIngredient = asyncHandler(async (req, res, next) => {
     data: ingredient,
   })
 })
+exports.storeIngredients = asyncHandler(async (req, res, next) => {
+ let ingredients = await  Ingredient.create(req.body.ingredients);
+
+  res.status(200).json({
+    success: true,
+    data: ingredients,
+  })
+})
